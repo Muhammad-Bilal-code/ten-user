@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+    padding: 0;
+    margin: 0;
+}
+.main {
+    background-color: antiquewhite;
+    width: calc(100vw);
+    height: calc(100vh);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.user-cont {
+    padding: 10px;
+    background-color: turquoise;
+    margin: 5px 5px;
+    width: 18%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.modal-main {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: calc(100vw);
+    height: calc(100vh);
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-box {
+    width: 500px;
+    height: 400px;
+    background-color: white;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.close {
+    position: absolute;
+    right: 0;
+    padding: 10px;
+    background-color: wheat;
+    cursor: pointer;
+}
+.cont {
+    background-color: green;
+    height: 100%;
+    padding-top: 40px;
+    overflow-y: scroll;
+    padding-left: 10px;
+}
+.modal-main {
+    display: none;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    
+    <div class="main"></div>
+    <div class="modal-main" onclick="handleClose()">
+        <div class="modal-box">
+            <div class="close" onclick="handleClose()">X</div>
+            <div class="cont"></div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
